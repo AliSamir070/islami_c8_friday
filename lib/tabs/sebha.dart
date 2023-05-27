@@ -16,6 +16,7 @@ class _SebhaTabState extends State<SebhaTab> {
     "الحمد لله",
     "الله اكبر",
     "لا اله الا الله",
+    "لا حول ولا قوة الا بالله"
   ];
   @override
   Widget build(BuildContext context) {
@@ -111,7 +112,7 @@ class _SebhaTabState extends State<SebhaTab> {
   void tsbeeeh(){
     if(sebhaCounter==32){
       sebhaCounter = 0;
-      if(tsbeehatCounter==3){
+      if(tsbeehatCounter==4){
         tsbeehatCounter = 0;
       }else{
         tsbeehatCounter++;

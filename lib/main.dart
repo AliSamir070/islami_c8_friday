@@ -5,13 +5,17 @@ import 'package:islami_c8_friday/hadeth_content.dart';
 import 'package:islami_c8_friday/home_screen.dart';
 import 'package:islami_c8_friday/my_theme.dart';
 import 'package:islami_c8_friday/providers/my_provider.dart';
+import 'package:islami_c8_friday/shared_prefs.dart';
 import 'package:islami_c8_friday/sura_content.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPrefs.prefs = await SharedPreferences.getInstance();
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(
-      create: (context) => MyProvider(),
+      create: (context) => MyProvider()..init(),
     ),
     //ChangeNotifierProvider(create: (context) => SuraDetailsProvider(),),
   ], child: MyApplication()));

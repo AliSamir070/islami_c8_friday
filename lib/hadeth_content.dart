@@ -7,6 +7,8 @@ class HadethContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)?.settings.arguments as HadethModel;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(

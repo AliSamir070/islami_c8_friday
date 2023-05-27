@@ -124,10 +124,14 @@ class QurabTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    print(height);
+    print(width);
     return Center(
       child: Column(
         children: [
-          Image.asset("assets/images/quran_bg.png"),
+          Image.asset("assets/images/quran_bg.png",height: height*0.32,width: width*0.5,),
           Divider(
             thickness: 2,
             color: Theme.of(context).colorScheme.onBackground,
